@@ -93,9 +93,9 @@ function Contact() {
               Feel free to reach out for collaborations or just a friendly hello!
             </p>
             <ul className="space-y-3">
-              <li className="text-gray-300">📧 Email: example@email.com</li>
-              <li className="text-gray-300">📍 Location: Your City, Country</li>
-              <li className="text-gray-300">📞 Phone: +123 456 7890</li>
+              <li className="text-gray-300">📧 Email: fawadeqbal@gmail.com</li>
+              <li className="text-gray-300">📍 Location: Abbottabad, Pakistan</li>
+              <li className="text-gray-300">📞 Phone: +92 314 9972883</li>
             </ul>
           </div>
         </motion.div>

@@ -14,3 +14,12 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Light Theme (Default) */
+body {
+  @apply bg-light text-dark;
+}
+
+/* Dark Theme */
+.dark body {
+  @apply bg-dark text-light;
+}
