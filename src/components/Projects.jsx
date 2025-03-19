@@ -1,25 +1,27 @@
 import React from 'react';
-import { FaCar, FaRobot, FaLaptopCode } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 function Projects() {
   const projects = [
     {
       title: 'Autonomous Car',
-      description: 'Built a small-scale autonomous car using IR sensors for obstacle detection and path following with efficient navigation algorithms.',
-      icon: <FaCar className="text-5xl text-blue-400" />,
+      description:
+        'Built a small-scale autonomous car using IR sensors for obstacle detection and path following with efficient navigation algorithms.',
+      image: 'https://plus.unsplash.com/premium_photo-1733317438378-1d6a0b8e65e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       technologies: ['Arduino', 'IR Sensors', 'C++'],
     },
     {
       title: 'Student Management System',
-      description: 'Developed a student management system using Java GUI and a simple Model-View-Controller architecture to efficiently manage student data.',
-      icon: <FaLaptopCode className="text-5xl text-emerald-400" />,
+      description:
+        'Developed a student management system using Java GUI and a simple Model-View-Controller architecture to efficiently manage student data.',
+      image: 'https://images.unsplash.com/photo-1598981457915-aea220950616?q=80&w=2093&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       technologies: ['Java', 'Swing', 'MVC'],
     },
     {
       title: 'Customized Chatbot',
-      description: 'Created a customized chatbot utilizing GPT APIs and integrated it with various platforms to provide seamless user interactions.',
-      icon: <FaRobot className="text-5xl text-yellow-400" />,
+      description:
+        'Created a customized chatbot utilizing GPT APIs and integrated it with various platforms to provide seamless user interactions.',
+      image: 'https://plus.unsplash.com/premium_photo-1677094310919-d0361465d3be?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       technologies: ['GPT APIs', 'API Integration', 'JavaScript'],
     },
   ];
@@ -54,15 +56,24 @@ function Projects() {
               transition={{ duration: 0.8 }}
               className="bg-gray-900 rounded-2xl shadow-xl border border-blue-500/10 hover:scale-105 transition-transform"
             >
-              <div className="h-48 flex items-center justify-center bg-gradient-to-br from-slate-700 to-slate-900">
-                {project.icon}
+              <div className="h-48 w-full overflow-hidden rounded-t-2xl">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {project.title}
+                </h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, idx) => (
-                    <span key={idx} className="bg-blue-500/10 px-3 py-1 rounded-full text-sm text-blue-400">
+                    <span
+                      key={idx}
+                      className="bg-blue-500/10 px-3 py-1 rounded-full text-sm text-blue-400"
+                    >
                       {tech}
                     </span>
                   ))}

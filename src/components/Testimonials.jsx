@@ -4,23 +4,23 @@ import { motion } from 'framer-motion';
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Jane Doe",
     role: "CEO, Acme Corp",
-    image: "/path/to/image1.jpg", // Update with actual image path
-    text: "Working with DevName was a fantastic experience. The project was delivered on time with outstanding quality!",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=200", // Update with actual image path
+    text: "Working with Fawad Iqbal was a fantastic experience. The project was delivered on time with outstanding quality!",
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "John Smith",
     role: "CTO, Beta Inc",
-    image: "/path/to/image2.jpg", // Update with actual image path
-    text: "I highly recommend DevName for any development project. Innovative solutions and superb support.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80", // Update with actual image path
+    text: "I highly recommend Fawad Iqbal for any development project. Innovative solutions and superb support.",
   },
   {
     id: 3,
     name: "Michael Brown",
     role: "Lead Developer, Gamma Tech",
-    image: "/path/to/image3.jpg", // Update with actual image path
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80", // Update with actual image path
     text: "His expertise in full-stack and IoT projects was key to our success. Truly a pleasure to collaborate with.",
   },
 ];
