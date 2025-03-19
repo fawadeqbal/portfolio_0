@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -19,8 +18,8 @@ function Header() {
     { id: 'home', label: 'Home' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
-    {id:"experience",label:"Experience"},
-    {id:"testimonials",label:"Testimonials"},
+    { id: 'experience', label: 'Experience' },
+    { id: 'testimonials', label: 'Testimonials' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -40,7 +39,11 @@ function Header() {
           <div className="w-6 h-0.5 bg-slate-50 my-1.5"></div>
           <div className="w-6 h-0.5 bg-slate-50 my-1.5"></div>
         </button>
-        <ul className={`md:flex md:static ${isMenuOpen ? 'fixed top-[70px] left-0' : 'fixed top-[70px] -left-full'} w-full md:w-auto h-[calc(100vh-70px)] md:h-auto bg-slate-900/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none flex-col md:flex-row items-center md:gap-8 pt-8 md:pt-0 transition-all duration-300`}>
+        <ul
+          className={`fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-slate-900/95 backdrop-blur-md flex flex-col items-center gap-8 pt-8 transition-transform duration-300 transform ${
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } md:static md:flex md:flex-row md:gap-8 md:pt-0 md:translate-x-0`}
+        >
           {navLinks.map(link => (
             <li key={link.id}>
               <a 
